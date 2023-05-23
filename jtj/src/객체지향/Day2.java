@@ -1,4 +1,4 @@
-package jtj;
+package 객체지향;
 
 class Animal{
 	//Animal 클래스에 name 이라는 String 변수를 추가했다. 
@@ -44,15 +44,23 @@ public class Day2 {
 		// 도트 연산자와 마찬가지로 객체.메서드 로 호출해야 한다.
 			cat.setName("부들이"); //문자열로 하는 이유는 setName 메서드는 입력항목으로 문자열(String)을 필요
 			System.out.println(cat.name); //부들이 출력
+			
 		//main메서드에서 cat.setName("부들이")와 같이 "부들이"라는 입력값으로 setName 메서드를 호출했기 때문에
 		//setName 함수의 입력항목 name에는 "부들이"라는 문자열이 전달될 것이다.
 		//this.name = "부들이";
 			//this는 Animal 클래스에 의해서 생성된 객체를 지칭한다. cat객체에 의해 setName 메서드를 호출하면
 			//setName 메서드 내부에 선언된 this는 바로 cat 객체를 가리킨다. 
 			//따라서 this.name = "부들이";는 다음과 같이 해석된다. cat.name = "부들이"
+			//객체.객체변수 = 값
 			
+			// ** 객체 변수는 공유되지 않는다.
+			dog.setName("happy"); //dog 객체는 위에 생성되어 있다.
 			
+			System.out.println(cat.name); // 부들이 출력
+			System.out.println(dog.name); //happy 출력
+			//결과를 보면 name객체 변수는 공유되지 않는다.
 			
+			// *객체 변수의 값은 공유되지 않지만 조금 후에 공부할 static을 이용하게 되면 객체 변수를 공유하도록 만들 수도 있다.*
 	
 	}
 
