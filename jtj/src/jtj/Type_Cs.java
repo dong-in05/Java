@@ -13,7 +13,7 @@ public class Type_Cs {
 		//HashMap<String, String>을 통해 값들의 속성을 정해주는 듯
 		HashMap<String, String> map1 = new HashMap<>();
 			map1.put("people", "사람");
-			map1.put("baseball", "야구");
+			map1.put("baseball", "야구"); 
 		
 		//key에 해당하는 value값을 얻기 위해서 get 메서드를 사용
 		System.out.println(map1.get("people"));
