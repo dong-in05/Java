@@ -2,7 +2,7 @@ package jtj;
 
 import java.util.*;
 
-public class Day1 {
+public class Type_Cs {
 
 	public static void main(String[] args) {
 		/*

@@ -11,7 +11,7 @@ class Animal{
 		}
 	}
 
-public class Day2 {
+public class Class {
 	public static void main(String[] args) {
 		/*
  			클래스
