@@ -10,7 +10,7 @@ public class Day1 {
 		 	key를 통해 value를 획득 
 		 	
 		*/
-		//HashMap<String, String>을 통해 값들의 속성을 정해주는 듯 ㅇㅈ?
+		//HashMap<String, String>을 통해 값들의 속성을 정해주는 듯
 		HashMap<String, String> map1 = new HashMap<>();
 			map1.put("people", "사람");
 			map1.put("baseball", "야구");
