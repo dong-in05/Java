@@ -43,7 +43,7 @@ public class Class {
 		// 즉 입력으로 name이라는 문자열을 받고 출력은 없는 형태의 메서드이다.
 		// 도트 연산자와 마찬가지로 객체.메서드 로 호출해야 한다.
 			cat.setName("부들이"); //문자열로 하는 이유는 setName 메서드는 입력항목으로 문자열(String)을 필요
-			System.out.println(cat.name); //부들이 출력
+			System.out.println(cat.name); //부들이 출력 
 			
 		//main메서드에서 cat.setName("부들이")와 같이 "부들이"라는 입력값으로 setName 메서드를 호출했기 때문에
 		//setName 함수의 입력항목 name에는 "부들이"라는 문자열이 전달될 것이다.
