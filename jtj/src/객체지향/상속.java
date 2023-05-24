@@ -134,7 +134,9 @@ public class 상속 {
 				이렇듯 입력항목이 다른 경우 동일한 이름의 메서드를 만들 수 있는데 이를 메서드 오버로딩(method overloading)이라고 부른다.
 				새로 만든 sleep 메서드를 실행 해 보자.
 			 */
-				houseDog.sleep(3);
+				houseDog.sleep(3); // happy zzz in house for 3 hours 출력
+				
+				
 			
 			
 			
