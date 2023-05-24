@@ -135,7 +135,39 @@ public class 상속 {
 				새로 만든 sleep 메서드를 실행 해 보자.
 			 */
 				houseDog.sleep(3); // happy zzz in house for 3 hours 출력
-				
+			
+			/*
+			 	다중 상속
+			 	 - 다중 상속은 클래스가 동시에 하나 이상의 클래스를 상속받는 것을 뜻한다 C++, 파이썬 등 많은 언어들이
+			 	   다중 상속을 지원하지만 자바는 다중 상속을 지원하지 않는다.
+			 	만약 자바가 다중 상속을 지원한다면 다음과 같은 코드가 만들어 질 수 있을 것이다.
+			 	 - 자바는 다중 상속을 지원하지 않기 때문에 아래 코드는 실제로 동작할 수 없는 코드이다.
+			 	 
+			 	 class A{
+			 	 	public void msg(){
+			 	 		System.out.println("A message");
+			 	 	}
+			 	 }
+			 	 class B{
+			 	 	public void msg(){
+			 	 		System.out.println("B message");
+			 	 	}
+			 	 }
+			 	 
+			 	 class C extends A, B {
+			 	 	public void static main(String[] args){
+			 	 		C test = new C();
+			 	 		test.msg();
+			 	 	}
+			 	 }
+			 	 
+			 	 자바가 다중 상속을 지원한다고 가정하고 A,B 라는 클래스를 위와 같이 동시에 상속(extends A,B)하도록 했다. 위 main
+			 	 메서드에서 tset.msg(); 실행 시 A 클래스의 msg 메서드를 실행해야 할까? 아니면 B 클래스의 msg 메서드를 실행해야 할까?
+			 	 다중 상속을 지원하게 되면 이렇듯 애매모호한 부분이 생기게 된다. 자바는 이러한 불명확한 부분을 애초에 잘라낸 언어이다.
+			 	 
+			 	  +tip
+			 	  	다중 상속을 지원하는 다른 언어들은 이렇게 동일한 메서드를 상속받는 경우 우선 순위 등을 적용하여 해결한다.
+			 */
 				
 			
 			
