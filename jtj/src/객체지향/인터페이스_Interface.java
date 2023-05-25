@@ -2,6 +2,16 @@ package 객체지향;
 
 interface Predator{
 	String getFood();
+	
+	default void printFood() {
+        System.out.printf("my food is %s\n", getFood());
+    }
+	
+	int LEG_COUNT = 4;  // 인터페이스 상수
+
+    static int speed() {
+        return LEG_COUNT * 30;
+    }
 }
 
 class Animal_s{
@@ -143,8 +153,38 @@ public class 인터페이스_Interface {
 		 	자바8 버전 이후부터는 디폴트 메서드(default mathod)를 사용할 수 있다. 인터페이스의 메서드는 몸통(구현체)을 가질 수 없지만 디폴트 메서드를 사용하면 
 		 	실제 구현된 형태의 메서드를 가질 수 있다.
 		 	
-		 
+		 	예를들어 Predator 인터페이스에 다음과 같은 디폴트 메서드를 추가할 수 있다.
+		 	default void printFood() {
+		        System.out.printf("my food is %s\n", getFood());
+		    	
+		    디폴트 메서드는 메서드명 가장 앞에 "default" 라고 표기해야 한다. 이렇게 Predator 인터페이스에 printFood 디폴트 메서드를 구현하면
+		     Predator 인터페이스를 구현한 Tiger, Lion 등의 실제 클래스는 printFood 메서드를 구현하지 않아도 사용할 수 있다. 그리고 디폴트
+		     메서드는 오버라이딩이 가능하다. 즉, printFood 메서드를 실제 클래스에서 다르게 구현하여 사용할수 있다.
+		    }
 		 */
+		
+		/*
+		 	스태틱 메서드
+		 	
+		 	자바8 버전 이후부터는 인터페이스에 스태틱 메서드(static method)를 사용할 수 있다. 인터페이스에 스태틱 메서드를 구현하면 Predator 
+		 	인터페이스를 구현하면 인터페이스명.스태틱메서드명 과 같이 사용하여 일반 클래스이 스태틱 메서드를 사용하는 것과 동일하게 사용할 수 있다.
+		 	
+		 	int LEG_COUNT = 4; //인터페이스 상수
+		 	
+		 	static int speed(){
+		 		return LEG_COUNT * 30;		 	
+		 	}
+		 	
+		 	이렇게 스태틱 메서드를 추가하면 다음과 같이 사용할 수 있다.
+		 */
+		System.out.println(Predator.speed()); // 120출력
+		
+		/*
+		 	인터페이스 상수
+		 	위 코드에서 사용한 int LEG_COUNT = 4; 문장은 인터페이스에 정의한 상수이다. 인터페이스에 정의한 상수는 int LEG_COUNT = 4; 처럼
+		 	public static final을 생략해도 자동으로 public static final이 적용된다. (다른 형태의 상수 정의는 불가능하다.)
+		 */
+		
 	}
 
 }
