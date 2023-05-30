@@ -103,8 +103,30 @@ public class 다형성 {
 			 	이렇게 Tiger, Lion 클래스에 bark 메서드를 구현하면 Bouncer 클래스의 barkAnimal 메서드를 위처럼 수정할 수 있다.
 			 	
 			 	barkAnimal 메서드의 입력 자료형이 Animal에서 Barkable로 변경되었다. 그리고 animal의 객체 타입을 체크하여 "어흥" 또는
-			 	"으르렁"
+			 	"으르렁"을 출력하던 부분을 그냥 bark 메서드를 호출하도록 변경했다. 이렇게 변경했더니 복잡하던 조건분기문도 사라지고 누가봐도 명확한
+			 	코드가 되었다.
+			 	
+			 	폴리모피즘을 이용하면 위의 예에서 보듯이 복잡한 형태의 분기문을 간단하게 처리할 수 있는 경우가 많다.
+			 	
+			 	위에서 사용한 tiger, lion 객체는 각각 Tiger,Lion 클래스의 객체이면서 Animal 클래스의 객체이기도 하고 Barkable, Predator
+			 	인터페이스의 객체이기도 하다. 이러한 이유로 barkAnimal 메서드의 입력 자료형을 Animal에서 Barkable로 바꾸어 사용할 수 있는 것이다.
+			 	
+			 	**이렇게 하나의 객체가 여러개의 자료형 타입을 가질 수 있는 것을 객체지향에서는 다형성(Polymorphism)이라고 한다.**
 			 
+			 */
+			Tiger2 tiger2 = new Tiger2(); // Tiger is a Tiger
+			Animal2 animal = new Tiger2(); // Tiger is a Animal
+			Predator predator = new Tiger2(); // Tiger is a Predator
+			Barkable barkable = new Tiger2(); // Tiger is a Barkable
+			
+			/*
+			 	Predator로 선언된 predator객체와 Barkable로 선언된 barkable 객체는 사용할 수 있는 메서드가 서로 다르다는 점이다. predator 객체는 getFood()
+			 	메서드가 선언된 Predaor 인터페이스의 객체이므로 getFood 메서드만 호출이 가능하다. 이와 마찬가지로 Barkable로 선언된 객체는 bark 메서드만 호출이 가능하다.
+			 	
+			 	getFood 메서드와 bark 메서드를 모두 사용하고 싶다면 
+			 	
+			 	Predator, Barkable 인터페이스를 구현한 Tiger로 선언된 tiger 객체를 그대로 사용하거나 다음과 같이 getFood,bark 메서드를 모두 포함하는
+			 	새로운 인터페이스를 새로 만들어 사용하면 된다.
 			 */
 			
 	}
