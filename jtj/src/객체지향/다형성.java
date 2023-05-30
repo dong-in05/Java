@@ -16,6 +16,10 @@ interface Barkable{
 	void bark();
 }
 
+interface BarkablePredator extends Predator, Barkable{
+	
+}
+
 class Animal2{
 	String name;
 	
@@ -32,7 +36,7 @@ class Tiger2 extends Animal2 implements Predator, Barkable{
 		System.out.println("어흥");
 	}
 }
-class Lion2 extends Animal2 implements Predator, Barkable{
+class Lion2 extends Animal2 implements BarkablePredator{ // Predator, Barkable 에서 수정
 	public String getFood() {
         return "banana";
     }
@@ -127,6 +131,24 @@ public class 다형성 {
 			 	
 			 	Predator, Barkable 인터페이스를 구현한 Tiger로 선언된 tiger 객체를 그대로 사용하거나 다음과 같이 getFood,bark 메서드를 모두 포함하는
 			 	새로운 인터페이스를 새로 만들어 사용하면 된다.
+			 	
+			 	Line 18
+			 	 기존 인터페이스를 상속하여 BarkablePredator를 만들었다. 위와 같이 하면 BarkablePredator는 Predator의 getFood 메서드, 
+			 	 Barkable의 bark 메서드를 그대로 사용할 수 있다. 인터페이스는 일반 클래스와는 달리 extends를 이용하여 여러개의 인터페이스(Predator, Barkable)를 동시에
+			 	 상속할 수 있다. 즉, 다중 상속이 지원된다.
+			 	 * 일반 클래스는 단일상속만 가능하다.
+			 	 
+			 	 Lion 클래스를 위에서 작성한 BarkablePredator 인터페이스를 구현하도록 수정 해 보자.
+			 	 
+			 	 class Lion extends Animal implements BarkablePredator {  **Predator, Barkable --> BarkablePredator**
+    					public String getFood() {
+        					return "banana";
+    						}
+			 	// 동일한 결과값 출력
+			 	 
+			 	  Bouncer 클래스의 barkAnimal 메서드의 입력 자료형이 Barkable이더라도 BarkablePredator를 구현한 lion 객체를 전달 할 수 있다.
+			 	  그 이유는 BarkablePredator는 Barkable 인터페이스를 상속받은 자식 인터페이스이기 때문이다. 자식 인터페이스로 생성한 객체의 자료형은 부모 인터페이스로
+			 	  사용하는 것이 가능하다. 자식 클래스의 객체 자료형을 부모 클래스의 자료형으로 사용 가능하다는 점과 동일하다.
 			 */
 			
 	}
