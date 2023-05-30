@@ -44,7 +44,8 @@ public class Class {
 		// 도트 연산자와 마찬가지로 객체.메서드 로 호출해야 한다.
 			cat.setName("부들이"); //문자열로 하는 이유는 setName 메서드는 입력항목으로 문자열(String)을 필요
 			System.out.println(cat.name); //부들이 출력 
-			
+			horse.setName(cat.name);// 다른 클래스의 값을 넣을 수 있다!?
+			System.out.println(horse.name); 
 		//main메서드에서 cat.setName("부들이")와 같이 "부들이"라는 입력값으로 setName 메서드를 호출했기 때문에
 		//setName 함수의 입력항목 name에는 "부들이"라는 문자열이 전달될 것이다.
 		//this.name = "부들이";

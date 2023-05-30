@@ -149,6 +149,8 @@ public class 다형성 {
 			 	  Bouncer 클래스의 barkAnimal 메서드의 입력 자료형이 Barkable이더라도 BarkablePredator를 구현한 lion 객체를 전달 할 수 있다.
 			 	  그 이유는 BarkablePredator는 Barkable 인터페이스를 상속받은 자식 인터페이스이기 때문이다. 자식 인터페이스로 생성한 객체의 자료형은 부모 인터페이스로
 			 	  사용하는 것이 가능하다. 자식 클래스의 객체 자료형을 부모 클래스의 자료형으로 사용 가능하다는 점과 동일하다.
+			 	 
+			 	 
 			 */
 			
 	}

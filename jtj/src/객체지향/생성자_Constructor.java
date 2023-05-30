@@ -124,8 +124,10 @@ public class 생성자_Constructor {
          */
         HouseDogs happy = new HouseDogs("happy");
         HouseDogs yorkshire = new HouseDogs(1);
+        HouseDogs bulldog = new HouseDogs(2);
         System.out.println(happy.name); // happy 출력
         System.out.println(yorkshire.name); // yorkshire 출력
+        System.out.println(bulldog.name);
         
         /*
          	위의 HouseDogs 클래스는 두 개의 생성자가 있다. 하나는 String 자료형을 입력으로 받는 생성자이고 다른 하나는 int 자료형을 
