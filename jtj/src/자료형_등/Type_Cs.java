@@ -1,4 +1,4 @@
-package jtj;
+package 자료형_등;
 
 import java.util.*;
 
