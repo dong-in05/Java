@@ -91,17 +91,20 @@ public class Method {
 			
 			Method Hi = new Method();
 			String z = Hi.say();
-			System.out.println(z); // "Hi" 출력
+			System.out.println(z + " 홍동인"); // "Hi" 출력
+			System.out.println(z + z); 
+			// 메서드 출력할때 다른거 붙여서 출력이 가능하네 메서드도 붙일 수 있나? 된다
 			
 			//String  z = Hi.say() 처럼 하면 z에는 "Hi"라는 문자열이 대입될 것이다.
 			//즉, 입력값이 없고 리턴값만 있는 메서드는 다음과 같이 사용된다.
 			// 리턴값받을변수 = 객체.메서드명()
+			// 
 			
 			//리턴값이 없는 메서드 메서드 
 			//위치 24Line
 			
 			Method sum = new Method();
-			sum.sum2(3, 4);
+			sum.sum2(3, 4); 
 			// 출력 : 3과 4의 합은 7입니다.
 			// 객체.메서드명(입력인수1, 입력인수2, ...)
 			//입력 값 - int 자료형 a, int 자료형 b
